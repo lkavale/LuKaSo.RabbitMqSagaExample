@@ -1,0 +1,75 @@
+version: '3.4'
+
+services:
+  lukaso.rabbitmqsagaexample.broker:
+    image: lukasorabbitmqsagaexamplebroker
+    container_name: "lukaso.rabbitmqsagaexample.broker"
+    hostname: broker
+    build:
+      context: .
+      dockerfile: src/LuKaSo.RabbitMqSagaExample.Broker/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80:80"
+    networks:
+      network:
+        ipv4_address: 172.20.0.11
+
+  lukaso.rabbitmqsagaexample.strategya:
+    image: lukasorabbitmqsagastrategya
+    container_name: "lukaso.rabbitmqsagaexample.strategya"
+    hostname: strategya
+    build:
+      context: .
+      dockerfile: src/LuKaSo.RabbitMqSagaExample.StrategyA/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      network:
+        ipv4_address: 172.20.0.21
+
+  lukaso.rabbitmqsagaexample.strategyb:
+    image: lukasorabbitmqsagastrategyb
+    container_name: "lukaso.rabbitmqsagaexample.strategyb"
+    hostname: strategyb
+    build:
+      context: .
+      dockerfile: src/LuKaSo.RabbitMqSagaExample.StrategyB/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      network:
+        ipv4_address: 172.20.0.22
+
+  lukaso.rabbitmqsagaexample.ordermanagement:
+    image: lukasorabbitmqsagaexampleordermanagement
+    container_name: "lukaso.rabbitmqsagaexample.ordermanagement"
+    hostname: ordermanagement
+    build:
+      context: .
+      dockerfile: src/LuKaSo.RabbitMqSagaExample.OrderManagement/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      network:
+        ipv4_address: 172.20.0.31
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: "rabbitmq"
+    hostname: rabbitmq
+    ports:
+      - "9001:15672"
+      - "5672:5672"
+    networks:
+      network:
+        ipv4_address: 172.20.0.2
+
+networks:
+  network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.20.0.0/16
