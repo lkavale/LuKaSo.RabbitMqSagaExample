@@ -1,0 +1,56 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.20.0.11",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/broker/{url}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.20.0.31",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/orderManagement/{url}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.20.0.21",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/strategyA/{url}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "172.20.0.22",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/strategyB/{url}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration"
+  }
+}

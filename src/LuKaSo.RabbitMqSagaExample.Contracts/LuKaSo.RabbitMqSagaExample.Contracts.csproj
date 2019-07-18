@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MassTransit.Automatonymous" Version="5.5.1" />
+    <PackageReference Include="MassTransit.Automatonymous" Version="5.5.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LuKaSo.RabbitMqSagaExample.Models\LuKaSo.RabbitMqSagaExample.Models.csproj" />
+    <ProjectReference Include="..\LuKaSo.RabbitMqSagaExample.Common\LuKaSo.RabbitMqSagaExample.Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,7 +18,7 @@ namespace LuKaSo.RabbitMqSagaExample.Common.Extensions
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(stream, obj);
                 stream.Seek(0, SeekOrigin.Begin);
-                //.Position = 0;
+
                 return (T)formatter.Deserialize(stream);
             }
         }

@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace LuKaSo.RabbitMqSagaExample.OrderManagement
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -14,8 +13,6 @@ namespace LuKaSo.RabbitMqSagaExample.OrderManagement
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
-            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-
             return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .ConfigureLogging((context, logging) =>

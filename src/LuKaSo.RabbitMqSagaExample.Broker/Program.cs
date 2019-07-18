@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace LuKaSo.RabbitMqSagaExample.Broker
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -14,8 +14,6 @@ namespace LuKaSo.RabbitMqSagaExample.Broker
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
-            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-
             return WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .ConfigureLogging((context, logging) =>

@@ -1,0 +1,20 @@
+<h2>
+  <mat-icon [inline]="true" matListIcon> bar_chart </mat-icon>
+  Order management
+</h2>
+
+<mat-card>
+  <mat-card-title>
+    Configuration
+  </mat-card-title>
+
+  <mat-card-content>
+    <div class="table">
+      <order-management-config [form]="form" (submit)="onSubmit()" (reset)="onReset()"></order-management-config>
+    </div>
+    <div class="chart">
+      <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [colors]="chartColors" [options]="options" chartType="pie"></canvas>
+    </div>
+  </mat-card-content>
+</mat-card>
+

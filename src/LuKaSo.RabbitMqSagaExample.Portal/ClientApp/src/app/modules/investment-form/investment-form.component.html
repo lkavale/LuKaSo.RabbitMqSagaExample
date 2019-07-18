@@ -1,0 +1,24 @@
+<h2>
+  <mat-icon [inline]="true" matListIcon> trending_up </mat-icon>
+  Investment
+</h2>
+
+<mat-card>
+  <mat-card-title>
+    Send new investment
+  </mat-card-title>
+
+  <mat-card-content>
+    <investment [form]="form" (submit)="onSubmit()" (reset)="onReset()"></investment>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title [hidden]="!hasData">
+    Portfolio
+  </mat-card-title>
+
+  <mat-card-content [hidden]="!hasData">
+    <investment-list [investments]="investments"></investment-list>
+  </mat-card-content>
+</mat-card>

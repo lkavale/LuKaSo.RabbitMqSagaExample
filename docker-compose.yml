@@ -10,11 +10,24 @@ services:
       dockerfile: src/LuKaSo.RabbitMqSagaExample.Broker/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      network:
+        ipv4_address: 172.20.0.11
+
+  lukaso.rabbitmqsagaexample.portal:
+    image: lukasorabbitmqsagaexampleportal
+    container_name: "lukaso.rabbitmqsagaexample.portal"
+    hostname: portal
+    build:
+      context: .
+      dockerfile: src/LuKaSo.RabbitMqSagaExample.Portal/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "80:80"
     networks:
       network:
-        ipv4_address: 172.20.0.11
+        ipv4_address: 172.20.0.12
 
   lukaso.rabbitmqsagaexample.strategya:
     image: lukasorabbitmqsagastrategya
@@ -38,6 +51,8 @@ services:
       dockerfile: src/LuKaSo.RabbitMqSagaExample.StrategyB/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "81:80"
     networks:
       network:
         ipv4_address: 172.20.0.22

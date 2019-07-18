@@ -1,0 +1,46 @@
+<form [formGroup]="form">
+
+  <div>
+    <div class="cell">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Amount from" formControlName="amountFrom" id="amountFrom">
+        <mat-error *ngFor="let validation of validationMessages.amountFrom">
+          <mat-error class="error-message" *ngIf="form.get('amountFrom').hasError(validation.type) && (form.get('amountFrom').dirty || form.get('amountFrom').touched)">{{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="cell">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Amount to" formControlName="amountTo" id="amountTo">
+        <mat-error *ngFor="let validation of validationMessages.amountTo">
+          <mat-error class="error-message" *ngIf="form.get('amountTo').hasError(validation.type) && (form.get('amountTo').dirty || form.get('amountTo').touched)">{{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div>
+    <div class="cell">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Interest rate from" formControlName="interestRateFrom" id="interestRateFrom">
+        <mat-error *ngFor="let validation of validationMessages.interestRateFrom">
+          <mat-error class="error-message" *ngIf="form.get('interestRateFrom').hasError(validation.type) && (form.get('interestRateFrom').dirty || form.get('interestRateFrom').touched)">{{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="cell">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Interest rate to" formControlName="interestRateTo" id="interestRateTo">
+        <mat-error *ngFor="let validation of validationMessages.interestRateTo">
+          <mat-error class="error-message" *ngIf="form.get('interestRateTo').hasError(validation.type) && (form.get('interestRateTo').dirty || form.get('interestRateTo').touched)">{{validation.message}}</mat-error>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <button mat-raised-button color="accent" type="submit" [disabled]="!form.valid">Submit</button>
+  <button mat-stroked-button color="accent" type="button" (click)="onReset()">Clear</button>
+
+</form>

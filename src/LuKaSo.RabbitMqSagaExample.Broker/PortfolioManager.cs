@@ -1,6 +1,6 @@
 ﻿using LuKaSo.RabbitMqSagaExample.Common.Extensions;
 using LuKaSo.RabbitMqSagaExample.Common.Infrastructure;
-using LuKaSo.RabbitMqSagaExample.Models;
+using LuKaSo.RabbitMqSagaExample.Common.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,17 +17,17 @@ namespace LuKaSo.RabbitMqSagaExample.Broker
             _portfolio = new List<Investment>();
         }
 
-        public void Add(Investment investment)
+        public void Add(InvestmentOffer investment)
         {
             if (_portfolio.Any(i => i.Id == investment.Id))
                 throw new InvalidOperationException("Investment has been already added");
 
-            _portfolio.Add(investment);
+            _portfolio.Add(new Investment(investment));
         }
 
-        public List<Investment> GetInvestments()
+        public Collection<Investment> GetInvestments()
         {
-            return _portfolio.DeepClone();
+            return new Collection<Investment>(_portfolio.DeepClone());
         }
 
         public void Remove(Guid id)

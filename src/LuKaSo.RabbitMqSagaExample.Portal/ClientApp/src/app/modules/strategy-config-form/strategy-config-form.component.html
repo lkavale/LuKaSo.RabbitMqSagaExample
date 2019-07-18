@@ -1,0 +1,16 @@
+<h2>
+  <mat-icon [inline]="true" matListIcon> toc </mat-icon>
+  {{strategyName}}
+</h2>
+
+<mat-card>
+
+  <mat-card-title>
+    Configuration
+  </mat-card-title>
+
+  <mat-card-content>
+    <strategy-config [form]="form" (submit)="onSubmit()" (reset)="onReset()"></strategy-config>
+  </mat-card-content>
+
+</mat-card>

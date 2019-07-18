@@ -3,7 +3,7 @@ using System;
 
 namespace LuKaSo.RabbitMqSagaExample.Common.Quartz
 {
-    public class QuartzServicesUtilities
+    public static class QuartzServicesUtilities
     {
         /// <summary>
         /// Start job with time span repeat

@@ -1,0 +1,8 @@
+.mat-table {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.mat-cell {
+  text-align: left;
+}

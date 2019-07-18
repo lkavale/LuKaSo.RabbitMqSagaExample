@@ -1,5 +1,5 @@
 ﻿using Automatonymous;
-using LuKaSo.RabbitMqSagaExample.Models;
+using LuKaSo.RabbitMqSagaExample.Common.Models;
 using System;
 
 namespace LuKaSo.RabbitMqSagaExample.Strategy
@@ -8,7 +8,7 @@ namespace LuKaSo.RabbitMqSagaExample.Strategy
     {
         public Guid CorrelationId { get; set; }
 
-        public Investment Investment { get; set; }
+        public InvestmentOffer Investment { get; set; }
 
         public State State { get; set; }
     }

@@ -1,0 +1,32 @@
+<form [formGroup]="form">
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="interestRateRange">
+      <mat-header-cell *matHeaderCellDef>Interest rate range</mat-header-cell>
+      <mat-cell *matCellDef="let element;">
+        {{element.get('investmentCategory').get('interestRateFrom').value}} - {{element.get('investmentCategory').get('interestRateTo').value}} %
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="percentage">
+      <mat-header-cell *matHeaderCellDef>Percentage</mat-header-cell>
+      <mat-cell *matCellDef="let element;" [formGroup]="element">
+        <mat-form-field class="full-width">
+          <input matInput formControlName="percentage">
+          <mat-error *ngFor="let validation of validationMessages.percentage">
+            <mat-error class="error-message" *ngIf="element.get('percentage').hasError(validation.type) && (element.get('percentage').dirty || element.get('percentage').touched)">{{validation.message}}</mat-error>
+          </mat-error>
+        </mat-form-field> %
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <div *ngFor="let validation of validationMessages.investments">
+    <div class="error-message" *ngIf="form.get('investments').hasError(validation.type) && (form.get('investments').dirty || form.get('investments').touched)">{{validation.message}}</div>
+  </div>
+
+  <button mat-raised-button color="accent" type="submit" [disabled]="!formArray.valid">Submit</button>
+  <button mat-stroked-button color="accent" type="button" (click)="onReset()">Clear</button>
+</form>

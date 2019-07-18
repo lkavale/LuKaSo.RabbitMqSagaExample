@@ -1,0 +1,65 @@
+[
+  {
+    "investmentCategory": {
+      "interestRateFrom": 1.0,
+      "interestRateTo": 2.0
+    },
+    "percentage": 10.0
+  },
+  {
+    "investmentCategory": {
+      "interestRateFrom": 2.0,
+      "interestRateTo": 3.0
+    },
+    "percentage": 10.0
+  },
+  {
+    "investmentCategory": {
+      "interestRateFrom": 3.0,
+      "interestRateTo": 4.0
+    },
+    "percentage": 10.0
+  },
+  {
+    "investmentCategory": {
+      "interestRateFrom": 4.0,
+      "interestRateTo": 5.0
+    },
+    "percentage": 10.0
+  },
+  {
+    "investmentCategory": {
+      "interestRateFrom": 5.0,
+      "interestRateTo": 6.0
+    },
+    "percentage": 10.0
+  },
+  {
+    "investmentCategory": {
+      "interestRateFrom": 6.0,
+      "interestRateTo": 7.0
+    },
+    "percentage": 10.0
+  },
+  {
+    "investmentCategory": {
+      "interestRateFrom": 7.0,
+      "interestRateTo": 8.0
+    },
+    "percentage": 10.0
+  },
+  {
+    "investmentCategory": {
+      "interestRateFrom": 8.0,
+      "interestRateTo": 9.0
+    },
+    "percentage": 10.0
+  },
+  {
+    "investmentCategory": {
+      "interestRateFrom": 9.0,
+      "interestRateTo": 10.0
+    },
+    "percentage": 10.0
+  }
+]

@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Amount" formControlName="amount" id="amount">
+    <mat-error *ngFor="let validation of validationMessages.amount">
+      <mat-error class="error-message" *ngIf="form.get('amount').hasError(validation.type) && (form.get('amount').dirty || form.get('amount').touched)">{{validation.message}}</mat-error>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Interest rate" formControlName="interestRate" id="interestRate">
+    <mat-error *ngFor="let validation of validationMessages.interestRate">
+      <mat-error class="error-message" *ngIf="form.get('interestRate').hasError(validation.type) && (form.get('interestRate').dirty || form.get('interestRate').touched)">{{validation.message}}</mat-error>
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="accent" type="submit" [disabled]="!form.valid">Submit</button>
+  <button mat-stroked-button color="accent" type="button" (click)="onReset()">Clear</button>
+
+</form>

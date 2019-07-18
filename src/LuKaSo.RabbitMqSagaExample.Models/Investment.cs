@@ -5,16 +5,20 @@ namespace LuKaSo.RabbitMqSagaExample.Models
     [Serializable]
     public class Investment
     {
+        /// <summary>
+        /// Id 
+        /// </summary>
         public Guid Id { get; set; }
 
+        /// <summary>
+        /// Investment rate
+        /// </summary>
         public double InterestRate { get; set; }
 
+        /// <summary>
+        /// Amount
+        /// </summary>
         public decimal Amount { get; set; }
-
-        public object Clone()
-        {
-            return MemberwiseClone();
-        }
 
         public override string ToString()
         {

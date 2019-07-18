@@ -1,4 +1,4 @@
-﻿using LuKaSo.RabbitMqSagaExample.Models;
+﻿using LuKaSo.RabbitMqSagaExample.Common.Models;
 
 namespace LuKaSo.RabbitMqSagaExample.Common.Infrastructure
 {
@@ -6,6 +6,6 @@ namespace LuKaSo.RabbitMqSagaExample.Common.Infrastructure
     {
         string Name { get; }
 
-        bool ValidateInvetsment(Investment investment);
+        bool ValidateInvetsment(InvestmentOffer investment);
     }
 }

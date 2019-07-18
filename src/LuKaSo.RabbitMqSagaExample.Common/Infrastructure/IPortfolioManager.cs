@@ -1,16 +1,15 @@
-﻿using LuKaSo.RabbitMqSagaExample.Models;
+﻿using LuKaSo.RabbitMqSagaExample.Common.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Collections.ObjectModel;
 
 namespace LuKaSo.RabbitMqSagaExample.Common.Infrastructure
 {
     public interface IPortfolioManager
     {
-        void Add(Investment investment);
+        void Add(InvestmentOffer investment);
 
         void Remove(Guid id);
 
-        List<Investment> GetInvestments();
+        Collection<Investment> GetInvestments();
     }
 }

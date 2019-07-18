@@ -23,7 +23,7 @@ namespace LuKaSo.RabbitMqSagaExample.Strategy
         /// <summary>
         /// New investment received event
         /// </summary>
-        public Event<IInvestmentNew> InvestmentNew { get; private set; }
+        public Event<IInvestmentOfferNew> InvestmentNew { get; private set; }
 
         /// <summary>
         /// Log
@@ -59,7 +59,7 @@ namespace LuKaSo.RabbitMqSagaExample.Strategy
                     // Log
                     .ThenAsync(ctx => Task.Run(() => _log.Debug($"Investment {ctx.Instance.Investment.ToString()} approved by startegy {strategy.Name}")))
                     // Send approved message
-                    .Then(ctx => ctx.Publish<StrategyInvestmentState, IInvestmentStrategyApproved>(new
+                    .Then(ctx => ctx.Publish<StrategyInvestmentState, IInvestmentOfferStrategyApproved>(new
                     {
                         Investment = ctx.Instance.Investment,
                         StrategyName = strategy.Name
@@ -71,7 +71,7 @@ namespace LuKaSo.RabbitMqSagaExample.Strategy
                     // Log
                     .ThenAsync(ctx => Task.Run(() => _log.Debug($"Investment {ctx.Instance.Investment.ToString()} revoked by startegy {strategy.Name}")))
                     // Send revoked message
-                    .Then(ctx => ctx.Publish<StrategyInvestmentState, IInvestmentStrategyRevoked>(new
+                    .Then(ctx => ctx.Publish<StrategyInvestmentState, IInvestmentOfferStrategyRevoked>(new
                     {
                         Investment = ctx.Instance.Investment,
                         StrategyName = strategy.Name

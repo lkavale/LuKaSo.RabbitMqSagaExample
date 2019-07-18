@@ -1,10 +1,11 @@
-﻿using LuKaSo.RabbitMqSagaExample.Models;
+﻿using LuKaSo.RabbitMqSagaExample.Common.Models;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace LuKaSo.RabbitMqSagaExample.Contracts.Broker
 {
     public interface IPortfolio
     {
-        List<Investment> Invetsments { get; set; }
+        Collection<Investment> Investments { get; set; }
     }
 }

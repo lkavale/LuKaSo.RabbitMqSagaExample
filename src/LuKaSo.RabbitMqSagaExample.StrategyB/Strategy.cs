@@ -1,25 +1,18 @@
 ﻿using LuKaSo.RabbitMqSagaExample.Common.Infrastructure;
-using LuKaSo.RabbitMqSagaExample.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using LuKaSo.RabbitMqSagaExample.Strategy;
+using LuKaSo.RabbitMqSagaExample.Strategy.Controllers;
 
 namespace LuKaSo.RabbitMqSagaExample.StrategyB
 {
-    public class Strategy : IStrategy
+    public class Strategy : StrategyBase
     {
-        public string Name
+        public Strategy(IConfigurationManager<StrategyConfig> configurationManager) : base(configurationManager)
         {
-            get { return "StrategyB"; }
         }
 
-        public bool ValidateInvetsment(Investment investment)
+        public override string Name
         {
-            if (investment.Amount > 300 && investment.Amount < 800 && investment.InterestRate > 7.0)
-                return true;
-
-            return false;
+            get { return "StrategyB"; }
         }
     }
 }

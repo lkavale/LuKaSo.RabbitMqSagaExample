@@ -1,0 +1,41 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <h2><mat-icon [inline]="true">view_module</mat-icon> Menu </h2>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-nav-list>
+  <h2 matSubheader> Broker </h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/investment">
+    <mat-icon [inline]="true" matListIcon> trending_up </mat-icon>
+    Investment
+  </a>
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader> Order management </h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/orderManagement">
+    <mat-icon [inline]="true" matListIcon> bar_chart </mat-icon>
+    Order management
+  </a>
+
+  <mat-divider></mat-divider>
+
+  <h2 matSubheader> Strategies </h2>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/strategyA">
+    <mat-icon [inline]="true" matListIcon> toc </mat-icon>
+    Strategy A
+  </a>
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/strategyB">
+    <mat-icon [inline]="true"matListIcon> toc </mat-icon>
+    Strategy B
+  </a>
+
+  <mat-divider></mat-divider>
+
+</mat-nav-list>
+

@@ -10,12 +10,19 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="MassTransit.Automatonymous" Version="5.5.1" />
+    <PackageReference Include="MassTransit.Automatonymous" Version="5.5.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\LuKaSo.RabbitMqSagaExample.Common\LuKaSo.RabbitMqSagaExample.Common.csproj" />
     <ProjectReference Include="..\LuKaSo.RabbitMqSagaExample.Contracts\LuKaSo.RabbitMqSagaExample.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Core">
+      <HintPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.core\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

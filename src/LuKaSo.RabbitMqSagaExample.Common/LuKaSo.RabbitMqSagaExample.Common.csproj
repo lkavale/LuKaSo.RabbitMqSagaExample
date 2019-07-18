@@ -5,14 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MassTransit.Automatonymous" Version="5.5.1" />
+    <PackageReference Include="MassTransit.Automatonymous" Version="5.5.2" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="5.5.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.2.0" />
     <PackageReference Include="Quartz" Version="3.0.7" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\LuKaSo.RabbitMqSagaExample.Models\LuKaSo.RabbitMqSagaExample.Models.csproj" />
   </ItemGroup>
 
 </Project>

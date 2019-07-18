@@ -5,21 +5,21 @@ VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A019EF61-34C7-4FDF-B775-AC14D174E1FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuKaSo.RabbitMqSagaExample.Broker", "src\LuKaSo.RabbitMqSagaExample.Broker\LuKaSo.RabbitMqSagaExample.Broker.csproj", "{CDFA5C91-9C50-4359-A8CA-7B1C350AAAF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.Broker", "src\LuKaSo.RabbitMqSagaExample.Broker\LuKaSo.RabbitMqSagaExample.Broker.csproj", "{CDFA5C91-9C50-4359-A8CA-7B1C350AAAF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuKaSo.RabbitMqSagaExample.StrategyA", "src\LuKaSo.RabbitMqSagaExample.StrategyA\LuKaSo.RabbitMqSagaExample.StrategyA.csproj", "{FA184735-E6F1-440A-9E06-9E27505B5873}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.StrategyA", "src\LuKaSo.RabbitMqSagaExample.StrategyA\LuKaSo.RabbitMqSagaExample.StrategyA.csproj", "{FA184735-E6F1-440A-9E06-9E27505B5873}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuKaSo.RabbitMqSagaExample.StrategyB", "src\LuKaSo.RabbitMqSagaExample.StrategyB\LuKaSo.RabbitMqSagaExample.StrategyB.csproj", "{F2EF6372-FF35-40A0-AC8C-79F8FC15C51B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.StrategyB", "src\LuKaSo.RabbitMqSagaExample.StrategyB\LuKaSo.RabbitMqSagaExample.StrategyB.csproj", "{F2EF6372-FF35-40A0-AC8C-79F8FC15C51B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuKaSo.RabbitMqSagaExample.OrderManagement", "src\LuKaSo.RabbitMqSagaExample.OrderManagement\LuKaSo.RabbitMqSagaExample.OrderManagement.csproj", "{FC2BF11F-EC38-4A8C-A821-CE1CEA0D4699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.OrderManagement", "src\LuKaSo.RabbitMqSagaExample.OrderManagement\LuKaSo.RabbitMqSagaExample.OrderManagement.csproj", "{FC2BF11F-EC38-4A8C-A821-CE1CEA0D4699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuKaSo.RabbitMqSagaExample.Strategy", "src\LuKaSo.RabbitMqSagaExample.Strategy\LuKaSo.RabbitMqSagaExample.Strategy.csproj", "{E327A438-6D91-4712-8A8B-52A670452B5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.Strategy", "src\LuKaSo.RabbitMqSagaExample.Strategy\LuKaSo.RabbitMqSagaExample.Strategy.csproj", "{E327A438-6D91-4712-8A8B-52A670452B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuKaSo.RabbitMqSagaExample.Contracts", "src\LuKaSo.RabbitMqSagaExample.Contracts\LuKaSo.RabbitMqSagaExample.Contracts.csproj", "{C1751D61-F055-4ECC-B99A-DBD309C05F25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.Contracts", "src\LuKaSo.RabbitMqSagaExample.Contracts\LuKaSo.RabbitMqSagaExample.Contracts.csproj", "{C1751D61-F055-4ECC-B99A-DBD309C05F25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuKaSo.RabbitMqSagaExample.Common", "src\LuKaSo.RabbitMqSagaExample.Common\LuKaSo.RabbitMqSagaExample.Common.csproj", "{7C9416F4-B1B5-4D59-B5C8-47609188EB81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.Common", "src\LuKaSo.RabbitMqSagaExample.Common\LuKaSo.RabbitMqSagaExample.Common.csproj", "{7C9416F4-B1B5-4D59-B5C8-47609188EB81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuKaSo.RabbitMqSagaExample.Models", "src\LuKaSo.RabbitMqSagaExample.Models\LuKaSo.RabbitMqSagaExample.Models.csproj", "{B9761A8B-F162-4950-97EB-49C9B9FCB384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.Portal", "src\LuKaSo.RabbitMqSagaExample.Portal\LuKaSo.RabbitMqSagaExample.Portal.csproj", "{E0627061-A52B-486F-8D48-50F9E5E3D3D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +59,10 @@ Global
 		{7C9416F4-B1B5-4D59-B5C8-47609188EB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C9416F4-B1B5-4D59-B5C8-47609188EB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C9416F4-B1B5-4D59-B5C8-47609188EB81}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B9761A8B-F162-4950-97EB-49C9B9FCB384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B9761A8B-F162-4950-97EB-49C9B9FCB384}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B9761A8B-F162-4950-97EB-49C9B9FCB384}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B9761A8B-F162-4950-97EB-49C9B9FCB384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0627061-A52B-486F-8D48-50F9E5E3D3D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0627061-A52B-486F-8D48-50F9E5E3D3D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0627061-A52B-486F-8D48-50F9E5E3D3D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0627061-A52B-486F-8D48-50F9E5E3D3D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
