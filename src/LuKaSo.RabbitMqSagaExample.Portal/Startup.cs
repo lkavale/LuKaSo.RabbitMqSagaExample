@@ -54,14 +54,15 @@ namespace LuKaSo.RabbitMqSagaExample.Portal
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
-            app.Map("/mvc", HandleMapMvc);
-            app.Map("/api", HandleMapApiGateway);
+            app.Map("/api", (a) => a
+                .UseOcelot()
+                .GetAwaiter()
+                .GetResult());
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.RoutePrefix = "";
                 c.SwaggerEndpoint("http://localhost/api/broker/swagger/v1/swagger.json", "Broker API");
                 c.SwaggerEndpoint("http://localhost/api/orderManagement/swagger/v1/swagger.json", "Order management API");
                 c.SwaggerEndpoint("http://localhost/api/strategyA/swagger/v1/swagger.json", "Strategy A API");
@@ -70,32 +71,12 @@ namespace LuKaSo.RabbitMqSagaExample.Portal
 
             app.UseSpa(spa =>
             {
-                // To learn more about options for serving an Angular SPA from ASP.NET Core,
-                // see https://go.microsoft.com/fwlink/?linkid=864501
-
                 spa.Options.SourcePath = "ClientApp";
 
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");
                 }
-            });
-        }
-
-        private static void HandleMapApiGateway(IApplicationBuilder app)
-        {
-            app.UseOcelot()
-                .GetAwaiter()
-                .GetResult();
-        }
-
-        private static void HandleMapMvc(IApplicationBuilder app)
-        {
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
             });
         }
     }

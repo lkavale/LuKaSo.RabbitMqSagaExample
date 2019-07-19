@@ -1,8 +1,20 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim AS base
+FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+
+RUN apt-get update
+RUN apt-get install -y gnupg2
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get install -y nodejs
+
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2-stretch AS build
+FROM microsoft/dotnet:2.2-sdk AS build
+
+RUN apt-get update
+RUN apt-get install -y gnupg2
+RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
+RUN apt-get install -y nodejs
+
 WORKDIR /src
 COPY ["src/LuKaSo.RabbitMqSagaExample.Portal/LuKaSo.RabbitMqSagaExample.Portal.csproj", "src/LuKaSo.RabbitMqSagaExample.Portal/"]
 RUN dotnet restore "src/LuKaSo.RabbitMqSagaExample.Portal/LuKaSo.RabbitMqSagaExample.Portal.csproj"

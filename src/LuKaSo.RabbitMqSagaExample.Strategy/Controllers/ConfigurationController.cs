@@ -23,6 +23,10 @@ namespace LuKaSo.RabbitMqSagaExample.Strategy.Controllers
             _configManager = configManager;
         }
 
+        /// <summary>
+        /// Get configuration
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -38,6 +42,11 @@ namespace LuKaSo.RabbitMqSagaExample.Strategy.Controllers
             return _configManager.Read();
         }
 
+        /// <summary>
+        /// Update configuration
+        /// </summary>
+        /// <param name="config"></param>
+        /// <returns></returns>
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

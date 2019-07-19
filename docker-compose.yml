@@ -51,8 +51,6 @@ services:
       dockerfile: src/LuKaSo.RabbitMqSagaExample.StrategyB/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "81:80"
     networks:
       network:
         ipv4_address: 172.20.0.22

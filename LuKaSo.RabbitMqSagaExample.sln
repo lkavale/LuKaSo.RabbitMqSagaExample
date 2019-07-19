@@ -21,6 +21,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuKaSo.RabbitMqSagaExample.Portal", "src\LuKaSo.RabbitMqSagaExample.Portal\LuKaSo.RabbitMqSagaExample.Portal.csproj", "{E0627061-A52B-486F-8D48-50F9E5E3D3D9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9C228B9-6D58-4B1C-A440-8D9C04346134}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

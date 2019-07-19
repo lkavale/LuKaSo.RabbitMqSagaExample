@@ -5,15 +5,30 @@ namespace LuKaSo.RabbitMqSagaExample.Strategy.Controllers
 {
     public abstract class StrategyBase : IStrategy
     {
+        /// <summary>
+        /// Configuration manager
+        /// </summary>
         private readonly IConfigurationManager<StrategyConfig> _configurationManager;
 
+        /// <summary>
+        /// Strategy base
+        /// </summary>
+        /// <param name="configurationManager"></param>
         protected StrategyBase(IConfigurationManager<StrategyConfig> configurationManager)
         {
             _configurationManager = configurationManager;
         }
 
+        /// <summary>
+        /// Strategy name
+        /// </summary>
         public abstract string Name { get; }
 
+        /// <summary>
+        /// Validate investment
+        /// </summary>
+        /// <param name="investment"></param>
+        /// <returns></returns>
         public bool ValidateInvetsment(InvestmentOffer investment)
         {
             var config = _configurationManager.Read();

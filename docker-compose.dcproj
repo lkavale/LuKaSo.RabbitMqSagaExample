@@ -5,8 +5,8 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>a019ef61-34c7-4fdf-b775-ac14d174e1fc</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>lukaso.rabbitmqsagaexample.broker</DockerServiceName>
+    <DockerServiceUrl>http://localhost/</DockerServiceUrl>
+    <DockerServiceName>lukaso.rabbitmqsagaexample.portal</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
