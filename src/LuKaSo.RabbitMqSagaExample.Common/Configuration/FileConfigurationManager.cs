@@ -35,7 +35,7 @@ namespace LuKaSo.RabbitMqSagaExample.Common.Configuration
 
             if (!File.Exists(_path))
             {
-                Write(default(T));
+                Write(default);
             }
         }
 

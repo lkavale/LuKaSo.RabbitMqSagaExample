@@ -33,7 +33,7 @@ namespace LuKaSo.RabbitMqSagaExample.Broker
         /// <summary>
         /// Configuration
         /// </summary>
-        public IConfiguration _configuration { get; }
+        private readonly IConfiguration _configuration;
 
         /// <summary>
         /// Startup
